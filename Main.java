@@ -11,15 +11,15 @@ public class Main {
         System.out.println("2. Kamar Suite");
         System.out.println("-600.000-");
 
-        // Tambah beberapa kamar secara dinamis
+       
         System.out.print("Masukkan jumlah kamar yang akan ditambahkan: ");
         int numRooms = scanner.nextInt();
-        scanner.nextLine(); // Mengonsumsi newline
+        scanner.nextLine(); 
 
         for (int i = 0; i < numRooms; i++) {
             System.out.print("Masukkan nomor kamar: ");
             int roomNumber = scanner.nextInt();
-            scanner.nextLine(); // Mengonsumsi newline
+            scanner.nextLine(); 
             System.out.print("Masukkan tipe kamar (Standard/Suite): ");
             String roomType = scanner.nextLine();
 
@@ -33,7 +33,7 @@ public class Main {
             }
         }
 
-        // Tambah data tamu secara dinamis
+        
         System.out.print("Masukkan nama tamu: ");
         String guestName = scanner.nextLine();
         System.out.print("Masukkan NIK : ");
@@ -41,7 +41,7 @@ public class Main {
 
         Guest guest = new Guest(guestName, guestId);
 
-        // Membuat reservasi
+        
         System.out.print("Masukkan nomor kamar yang ingin dipesan: ");
         int roomNumber = scanner.nextInt();
         Ruang room = system.getRoomByNumber(roomNumber);
@@ -52,12 +52,12 @@ public class Main {
             System.out.print("Masukkan biaya tambahan fasilitas: ");
             double additionalFacilities = scanner.nextDouble();
 
-            // Membuat reservasi dan menampilkannya
+            
             Reservation reservation = system.createReservation(guest, room, nights, additionalFacilities);
             system.getReservationStatus(reservation);
             reservation.displayReservation();
 
-            // Menampilkan tagihan akhir
+           
             Bill bill = new Bill(reservation);
             bill.displayBill();
         } else {
