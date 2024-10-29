@@ -20,20 +20,4 @@ public class Ruang {
     public double getHargaPermalam() {
         return HargaPermalam;
     }
-
-
-
-    //    public Ruang(int roomNumber, String roomType, double pricePerNight) {
-//        this.roomNumber = roomNumber;
-//        this.roomType = roomType;
-//        this.HargaPermalam = pricePerNight;
-//    }
-//
-//    public double getPrice() {
-//        return HargaPermalam;
-//    }
-//
-//    public String getRoomType() {
-//        return roomType;
-//    }
 }
